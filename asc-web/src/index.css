@@ -85,6 +85,8 @@ button:focus-visible {
 
 body {
   font-family: "Work Sans", sans-serif;
+  background-color: rgba(114, 112, 120, 0.672);
+  position: fixed;
 }
 
 body:has(.card[data-color="blue"]:hover) {

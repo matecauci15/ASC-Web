@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { recepcion } from '../assets';
+import { recepcion, banner, banner1, banner2 } from '../assets';
 
 const Banner = () => {
   const images = [
     recepcion,
-    '../assets/react.svg',
-    'url_de_la_imagen_3',
+    banner,
+    banner1,
+    banner2
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -15,13 +16,13 @@ const Banner = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextImage, 5000); 
+    const intervalId = setInterval(nextImage, 8000); 
 
     return () => clearInterval(intervalId);
   }, []); 
 
   return (
-    <div className="banner">
+    <div className="banner ">
       <img src={images[currentImageIndex]} alt="Banner" />
     </div>
   );
