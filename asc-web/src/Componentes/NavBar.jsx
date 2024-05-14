@@ -63,14 +63,111 @@
 
 // export default NavBar;
 
-import React from 'react';
+// import React from 'react';
+// import { NavLink } from 'react-router-dom';
+// import { logoasc } from '../assets';
+
+// const NavBar = () => {
+//   return (
+//     <header className="bg-gray-400">
+//       <div className="container mx-auto py-4 px-6 flex items-center justify-between">
+//         <NavLink to="/" className="w-44 h-auto">
+//           <img
+//             src={logoasc}
+//             alt="logo"
+//             className="h-auto w-full object-contain"
+//           />
+//         </NavLink>
+//         <button className="block md:hidden text-white">
+//           <svg
+//             className="h-6 w-6 fill-current"
+//             viewBox="0 0 24 24"
+//             xmlns="http://www.w3.org/2000/svg"
+//           >
+//             <path
+//               fillRule="evenodd"
+//               clipRule="evenodd"
+//               d="M3 5h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2z"
+//             />
+//           </svg>
+//         </button>
+//         <nav className="hidden md:flex text-white text-sm">
+//           <NavLink
+//             exact
+//             to="/"
+//             activeClassName="bg-gray-600"
+//             className="px-4 py-2 rounded-md mr-4"
+//           >
+//             Inicio
+//           </NavLink>
+//           <NavLink
+//             to="/productos"
+//             activeClassName="bg-gray-600"
+//             className="px-4 py-2 rounded-md mr-4"
+//           >
+//             Productos
+//           </NavLink>
+//           <NavLink
+//             to="/nosotros"
+//             activeClassName="bg-gray-600"
+//             className="px-4 py-2 rounded-md mr-4"
+//           >
+//             Nosotros
+//           </NavLink>
+//           <NavLink
+//             to="/coworking"
+//             activeClassName="bg-gray-600"
+//             className="px-4 py-2 rounded-md mr-4"
+//           >
+//             Coworking
+//           </NavLink>
+//           <NavLink
+//             to="/sumate"
+//             activeClassName="bg-gray-600"
+//             className="px-4 py-2 rounded-md"
+//           >
+//             Sumate!
+//           </NavLink>
+//         </nav>
+//       </div>
+//     </header>
+//   );
+// };
+
+// export default NavBar;
+
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { logoasc } from '../assets';
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <header className="bg-gray-400">
-      <div className="container mx-auto py-4 px-6 flex items-center justify-between">
+      <div className="container mx-auto py-4 px-6 flex items-center justify-between relative">
         <NavLink to="/" className="w-44 h-auto">
           <img
             src={logoasc}
@@ -78,7 +175,10 @@ const NavBar = () => {
             className="h-auto w-full object-contain"
           />
         </NavLink>
-        <button className="block md:hidden text-white">
+        <button
+          className="block md:hidden text-white"
+          onClick={toggleMenu}
+        >
           <svg
             className="h-6 w-6 fill-current"
             viewBox="0 0 24 24"
@@ -91,6 +191,51 @@ const NavBar = () => {
             />
           </svg>
         </button>
+        {isMenuOpen && (
+          <div className="fixed top-[85px] left-0 w-full h-50 bg-black bg-opacity-75 flex flex-col items-center z-50">
+            <NavLink
+              exact
+              to="/"
+              activeClassName="bg-gray-600"
+              className="block w-full px-4 py-2 text-white text-center"
+              onClick={closeMenu}
+            >
+              Inicio
+            </NavLink>
+            <NavLink
+              to="/productos"
+              activeClassName="bg-gray-600"
+              className="block w-full px-4 py-2 text-white text-center"
+              onClick={closeMenu}
+            >
+              Productos
+            </NavLink>
+            <NavLink
+              to="/nosotros"
+              activeClassName="bg-gray-600"
+              className="block w-full px-4 py-2 text-white text-center"
+              onClick={closeMenu}
+            >
+              Nosotros
+            </NavLink>
+            <NavLink
+              to="/coworking"
+              activeClassName="bg-gray-600"
+              className="block w-full px-4 py-2 text-white text-center"
+              onClick={closeMenu}
+            >
+              Coworking
+            </NavLink>
+            <NavLink
+              to="/sumate"
+              activeClassName="bg-gray-600"
+              className="block w-full px-4 py-2 text-white text-center"
+              onClick={closeMenu}
+            >
+              Sumate!
+            </NavLink>
+          </div>
+        )}
         <nav className="hidden md:flex text-white text-sm">
           <NavLink
             exact
