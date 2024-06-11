@@ -92,9 +92,11 @@ const HomePage = () => {
           <FaHeartbeat size={30} />
           <p className="text-sm sm:text-base md:text-lg lg:text-lg text-center mt-2">Salud</p>
           <p className="text-sm sm:text-base md:text-lg lg:text-lg text-center mt-2">Sumate a nuestra red de más de 500 productores en todo el país. Tenemos un equipo de profesionales a tu disposición.</p>
-        </div>
+        </div>    
       </div>
+      <div>
       <Empresas />
+      </div>
     </div>
   );
 };

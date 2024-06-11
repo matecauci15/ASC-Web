@@ -81,13 +81,13 @@
 
 import React from 'react'
 import { FaInbox, FaPhone, FaSearchLocation } from 'react-icons/fa'
-import { logoasc, snn } from '../assets/index'
+import { logoasc, snn, Logo } from '../assets/index'
 
 const Footer = () => {
   return (
-<div className='grid gap-6 md:grid-cols-3 lg:grid-cols-3 border-t-2 mb-12'>
+<div className='grid gap-6 md:grid-cols-3 lg:grid-cols-3 border-t-2  bg-[#334652]'>
   <div className='mt-20'>
-    <div className='m-2'>
+    <div className='mb-10 m-2 '>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732.2695514844901!2d-60.64705750112747!3d-32.94535676890072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab3e02e23ee3%3A0xe31441af851a61bd!2sEspa%C3%B1a%20810%2C%20S2000%20DBR%2C%20Santa%20Fe!5e0!3m2!1sen!2sar!4v1715121671306!5m2!1sen!2sar"
       width="300"
@@ -116,7 +116,7 @@ const Footer = () => {
     </div>
   </div>
   <div className='flex flex-col items-center mt-20'>
-    <img src={logoasc} alt="Logo asc" className='h-20 mb-2' />
+    <img src={Logo} alt="Logo asc" className='h-20 mb-2' />
     <img src={snn} alt='SNN' className='h-12' />
   </div>
 </div>

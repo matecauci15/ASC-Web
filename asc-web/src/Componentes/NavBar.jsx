@@ -138,7 +138,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { logoasc } from '../assets';
+import { logoasc, Logo } from '../assets';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -166,11 +166,11 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className="bg-gray-400">
+    <header className="bg-[#334652]">
       <div className="container mx-auto py-4 px-6 flex items-center justify-between relative">
         <NavLink to="/" className="w-44 h-auto">
           <img
-            src={logoasc}
+            src={Logo}
             alt="logo"
             className="h-auto w-full object-contain"
           />

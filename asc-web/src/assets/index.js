@@ -11,7 +11,7 @@ import sancor from './sancor.png'
 import afianzadora from './afianzadora.png'
 import provincia from './provincia.png'
 import triunfo from './triunfo.png'
-
+import Logo from './Logo.png'
 
 export {
     recepcion,
@@ -26,5 +26,6 @@ export {
     sancor,
     afianzadora,
     provincia,
-    mercantil
+    mercantil,
+    Logo
 }
