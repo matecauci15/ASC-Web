@@ -53,6 +53,8 @@
 // export default AboutUs;
 
 import React from 'react';
+import { vcs } from '../assets';
+
 
 const AboutUs = () => {
   return (
@@ -68,9 +70,9 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row items-center mb-12">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <img 
-              src="https://somosasc.com.ar/wp-content/uploads/2021/08/nosotros_asc.jpeg" 
+              src={vcs} 
               alt="Equipo de ASC Seguros" 
-              className="w-full rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className="w-full h-72 object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
             />
           </div>
           <div className="md:w-1/2 md:pl-12 text-center md:text-left">

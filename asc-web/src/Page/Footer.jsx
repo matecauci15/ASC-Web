@@ -99,22 +99,22 @@ const Footer = () => {
   </div>
 
   <div className='flex items-start justify-center mt-20'>
-  <div className='grid justify-center items-center'>
-  <h1 className=''>Contactanos: </h1>
-    <div className='flex items-center gap-6 h-12'>
-      <FaSearchLocation className='m-1' />
-      <p className=''> España 810, Rosario, Santa fe</p>
+      <div className='grid justify-center items-center'>
+        <h1 className='text-white'>Contactanos:</h1>
+        <div className='flex items-center gap-6 h-12'>
+          <FaSearchLocation className='text-white m-1' />
+          <p className='text-white'>España 810, Rosario, Santa fe</p>
+        </div>
+        <div className='flex items-center gap-6 h-12'>
+          <FaPhone className='text-white m-1' />
+          <p className='text-white'>+549 341 720 5016</p>
+        </div>
+        <div className='flex items-center gap-6 h-12'>
+          <FaInbox className='text-white m-1' />
+          <p className='text-white'>gestion@somosasc.com.ar</p>
+        </div>
+      </div>
     </div>
-    <div className='flex items-center gap-6 h-12'>
-      <FaPhone className='m-1' />
-      <p>+549 341 720 5016</p>
-    </div>
-    <div className='flex items-center gap-6 h-12'>
-      <FaInbox className='m-1' />
-      <p>gestion@somosasc.com.ar</p>
-</div>
-    </div>
-  </div>
   <div className='flex flex-col items-center mt-20'>
     <img src={Logo} alt="Logo asc" className='h-20 mb-2' />
     <img src={snn} alt='SNN' className='h-12' />
