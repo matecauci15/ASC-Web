@@ -103,7 +103,7 @@ const Footer = () => {
   <h1 className=''>Contactanos: </h1>
     <div className='flex items-center gap-6 h-12'>
       <FaSearchLocation className='m-1' />
-      <p> España 810, Rosario, Santa fe</p>
+      <p className=''> España 810, Rosario, Santa fe</p>
     </div>
     <div className='flex items-center gap-6 h-12'>
       <FaPhone className='m-1' />
