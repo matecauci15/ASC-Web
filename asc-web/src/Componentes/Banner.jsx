@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import {banner, banner1, banner2 } from '../assets';
+import {banner, banner1, banner2, Banners } from '../assets';
 import { Link } from 'react-router-dom';
 
 const Banner = () => {
-  const images = [banner, banner1, banner2];
+  const images = [banner, banner1, banner2, Banners];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 

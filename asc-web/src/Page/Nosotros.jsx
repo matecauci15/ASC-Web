@@ -53,7 +53,7 @@
 // export default AboutUs;
 
 import React from 'react';
-import { vcs } from '../assets';
+import { vcs, Banners } from '../assets';
 
 
 const AboutUs = () => {

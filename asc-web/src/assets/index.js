@@ -13,6 +13,12 @@ import provincia from './provincia.png'
 import triunfo from './triunfo.png'
 import Logo from './Logo.png'
 import vcs from './vcs.jpg'
+import Banners from './Banners.png'
+import autoasegurado from './autoasegurado.png'
+import tiendaa from './tiendaa.png'
+import casa from './casa.png'
+import puerta from './puerta.png'
+
 
 export {
     recepcion,
@@ -29,5 +35,10 @@ export {
     provincia,
     mercantil,
     Logo,
-    vcs
+    vcs,
+    Banners,
+    autoasegurado,
+    tiendaa,
+    casa,
+    puerta
 }
